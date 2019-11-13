@@ -1,5 +1,5 @@
 var http = require('http');
-var fs = require('fa');
+var fs = require('fs');
  var server = http.createServer(function(req,res){
        fs.readFile('index.html',function(err,data){
             if(err){
@@ -10,7 +10,8 @@ var fs = require('fa');
             res.setHeader('Content-Type','text/html');
             res.end(data)
        })
-       server.listen(3000,'localhost',function(){
-             console.log('server running');
+       
        })
+       server.listen(3000,'localhost',function(){
+            console.log('server running');
  })
